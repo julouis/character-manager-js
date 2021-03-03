@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="">
+    <title>Document</title>
+</head>
+
+<body>
+    <header></header>
+    <main>
+        <h1 class="text-primary">Design your hero</h1>
+        <!-- DEBUT DU MODAL POUR LE FORMULAIRE -->
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+            Click to create a hero
+        </button>
+        <button id="data-send-test" type="button" class="btn btn-primary">DataSend Test</button>
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Design your Hero</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form action="" method="POST">
+                            <ul>
+                                <li>
+                                    <label for="name">Super-Hero name</label><br>
+                                    <input class="name" type="text" id="name" name="name">
+                                </li>
+                                <li>
+                                    <label for="short-description">Short description</label><br>
+                                    <input class="short-description" type="text" id="short-description" name="short-description"></li>
+                                <li>
+                                    <label for="description">Longer description</label><br>
+                                    <input class="description" type="text" id="description" name="description">
+                                </li>
+                                <li>
+                                    <label for="image">Hero image</label><br>
+                                    <input class="image" type="file" id="image" name="image">
+                                </li>
+                            </ul>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button id="create-hero" type="button" class="btn btn-primary">Create Hero</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- FIN DU MODAL POUR LE FORMULAIRE -->
+        <template id="template">
+            <ul class="col-sm-6">
+                <li id="hero-name"></li>
+                <li id="hero-short-description"></li>
+                <li id="hero-description"></li>
+                <li id="hero-image"></li>
+            </ul>
+        </template>
+        <div id="target"></div>
+        <img src="data:image/gif;base64,R0lGODlhEAAQAMQAAORHHOVSKudfOulrSOp3WOyDZu6QdvCchPGolfO0o/XBs/fNwfjZ0frl3/zy7////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAkAABAALAAAAAAQABAAAAVVICSOZGlCQAosJ6mu7fiyZeKqNKToQGDsM8hBADgUXoGAiqhSvp5QAnQKGIgUhwFUYLCVDFCrKUE1lBavAViFIDlTImbKC5Gm2hB0SlBCBMQiB0UjIQA7" alt="star" width="16" height="16">
+
+    </main>
+    <script src="src/js/script.js"></script>
+</body>
+
+</html>
