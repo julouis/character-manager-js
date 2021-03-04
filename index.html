@@ -10,13 +10,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="src/css/style.css">
     <title>Document</title>
 </head>
 
 <body>
     <header></header>
-    <main>
+    <main class="container">
         <h1 class="text-primary">Design your hero</h1>
         <!-- DEBUT DU MODAL POUR LE FORMULAIRE -->
         <!-- Button trigger modal -->
@@ -36,22 +36,23 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        <form action="" method="POST">
+                        <form action="" method="">
                             <ul>
                                 <li>
                                     <label for="name">Super-Hero name</label><br>
-                                    <input class="name" type="text" id="name" name="name">
+                                    <input class="name" type="text" id="name" name="name" placeholder="Name">
                                 </li>
                                 <li>
                                     <label for="short-description">Short description</label><br>
-                                    <input class="short-description" type="text" id="short-description" name="short-description"></li>
+                                    <input class="short-description" type="text" id="short-description" name="short-description" placeholder="Short Description">
+                                </li>
                                 <li>
                                     <label for="description">Longer description</label><br>
-                                    <input class="description" type="text" id="description" name="description">
+                                    <input class="description" type="text" id="description" name="description" placeholder="Long Description">
                                 </li>
                                 <li>
                                     <label for="image">Hero image</label><br>
-                                    <input class="image" type="file" id="image" name="image">
+                                    <input class="image" type="file" id="hero-image-post" name="image" accept=".jpg .jpeg .png">
                                 </li>
                             </ul>
                         </form>
@@ -70,11 +71,12 @@
                 <li id="hero-short-description"></li>
                 <li id="hero-description"></li>
                 <li id="hero-image"></li>
+                <button type="button" id="modify-button" class="btn btn-warning">Modify</button>
+                <button type="button" id="delete-button" class="btn btn-danger">Delete</button>
             </ul>
         </template>
         <div id="target"></div>
-        <img src="data:image/gif;base64,R0lGODlhEAAQAMQAAORHHOVSKudfOulrSOp3WOyDZu6QdvCchPGolfO0o/XBs/fNwfjZ0frl3/zy7////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAkAABAALAAAAAAQABAAAAVVICSOZGlCQAosJ6mu7fiyZeKqNKToQGDsM8hBADgUXoGAiqhSvp5QAnQKGIgUhwFUYLCVDFCrKUE1lBavAViFIDlTImbKC5Gm2hB0SlBCBMQiB0UjIQA7" alt="star" width="16" height="16">
-
+        
     </main>
     <script src="src/js/script.js"></script>
 </body>
