@@ -23,7 +23,7 @@
         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
             Click to create a hero
         </button>
-        <button id="data-send-test" type="button" class="btn btn-primary">DataSend Test</button>
+
         <!-- Modal -->
         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
             aria-hidden="true">
@@ -64,6 +64,48 @@
                 </div>
             </div>
         </div>
+
+        <div class="modal fade" id="exampleModalModify" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Modify your Hero</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form action="" method="">
+                            <ul>
+                                <li>
+                                    <label for="name">Super-Hero name</label><br>
+                                    <input class="name" type="text" id="name" name="name" placeholder="Name">
+                                </li>
+                                <li>
+                                    <label for="short-description">Short description</label><br>
+                                    <input class="short-description" type="text" id="short-description" name="short-description" placeholder="Short Description">
+                                </li>
+                                <li>
+                                    <label for="description">Longer description</label><br>
+                                    <input class="description" type="text" id="description" name="description" placeholder="Long Description">
+                                </li>
+                                <li>
+                                    <label for="image">Hero image</label><br>
+                                    <input class="image" type="file" id="hero-image-post" name="image" accept=".jpg .jpeg .png">
+                                </li>
+                            </ul>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button id="create-hero" type="button" class="btn btn-primary">Create Hero</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
         <!-- FIN DU MODAL POUR LE FORMULAIRE -->
         <template id="template">
             <ul class="col-sm-6">
@@ -71,7 +113,7 @@
                 <li id="hero-short-description"></li>
                 <li id="hero-description"></li>
                 <li id="hero-image"></li>
-                <button type="button" id="modify-button" class="btn btn-warning">Modify</button>
+                <button type="button" data-toggle="modal" data-target="#exampleModalModify" id="modify-button" class="btn btn-warning">Modify</button>
                 <button type="button" id="delete-button" class="btn btn-danger">Delete</button>
             </ul>
         </template>
