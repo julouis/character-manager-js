@@ -54,7 +54,7 @@ async function fetchData() {
 				
 			})
 			
-			document.location.reload();
+			
 			
 			console.log(response.status)
 			const modifyHero = await response.json();
